@@ -1,6 +1,8 @@
 import { fetchData } from "./fetchData.js";
 
-export async function obtenerDatosPorGenero(genreId, tipo = "anime") {
+// Aquí se está manejando el contenido que se muestra en el apartado de "categorias"
+
+export async function obtenerDatosPorGenero(genreId, tipo = "manga") {
   if (!genreId || isNaN(genreId)) {
     console.error("ID de género no válido:", genreId);
     return [];
@@ -8,7 +10,7 @@ export async function obtenerDatosPorGenero(genreId, tipo = "anime") {
 
   const url = tipo === "manga"
     ? `https://api.jikan.moe/v4/manga?genres=${genreId}&order_by=score&sort=desc`
-    : `https://api.jikan.moe/v4/anime?genres=${genreId}&order_by=score&sort=desc`;
+    : ``;
 
   try {
     const res = await fetchData(url);
@@ -18,7 +20,7 @@ export async function obtenerDatosPorGenero(genreId, tipo = "anime") {
       return [];
     }
 
-    return res.data.slice(0, 35).map(item => ({
+    return res.data.slice(0, 25).map(item => ({
       title: item.title,
       image: item.images?.jpg?.image_url || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZPb9KqZvuoBmf71tYhOzxOCar7lKi1b9sag&s",
       id: item.mal_id,

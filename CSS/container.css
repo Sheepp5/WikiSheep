@@ -1,15 +1,15 @@
 .gallery {
   display: flex;
-  flex-wrap: wrap-reverse;
   gap: 20px;
   padding: 2rem;
   justify-content: center;
   margin-top: 5rem;
+  flex-wrap: wrap;
 }
 
 .card {
   position: relative;
-  width: 250px;
+  width: 180px;
   height: 250px;
   border-radius: 2rem;
   overflow: hidden;

@@ -1,8 +1,8 @@
 import { fetchData } from "../utils/fetchData.js";
 import { crearCarrusel } from "./carruselComponent.js";
 import { obtenerDatosPorGenero } from "../utils/obtenerDatos.js";
-
-const FALLBACK_IMAGE = "https://via.placeholder.com/300x400?text=No+Image";
+// Cards que están en "home" 
+// No las del carrusel, las principales
 
 async function obtenerGenresManga() {
   const url = "https://api.jikan.moe/v4/genres/manga";

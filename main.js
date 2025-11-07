@@ -20,7 +20,6 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   const dynamicContent = await crearMain();
 
-  // ✅ Limpieza correcta sin innerHTML
   mainContainer.replaceChildren(...dynamicContent.children);
 
   if (window.location.pathname.includes("categoria.html")) {

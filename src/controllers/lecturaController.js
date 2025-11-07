@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   app.innerHTML = "";
 
   const header = crearHeader();
-  const sidebar = crearSidebar();
+  // const sidebar = crearSidebar();
   const footer = crearFooter();
   app.appendChild(header);
 
