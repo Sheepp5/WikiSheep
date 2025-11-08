@@ -90,6 +90,4 @@ export const crearSidebar = async ({ onClose } = {}) => {
   });
 
   document.body.append(aside, overlay);
-
-  // ✅ No se abre automáticamente, se deja a control externo
 };

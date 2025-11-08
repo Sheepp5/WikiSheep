@@ -1,6 +1,6 @@
 import { fetchData } from "../utils/fetchData.js";
 import { crearCarrusel } from "./carruselComponent.js";
-import { obtenerDatosPorGenero } from "../utils/obtenerDatos.js";
+
 // Cards que están en "home" 
 // No las del carrusel, las principales
 
@@ -64,7 +64,6 @@ async function procesarGenero(genre, topData) {
   contenido.classList.add("card_contenido");
 
   const h1 = document.createElement("h1");
-  h1.classList.add("section_categorias");
   h1.textContent = genre.name;
 
   contenido.appendChild(h1);
@@ -90,7 +89,7 @@ function crearCarruselParaGenero(genre, topData) {
     const link = document.createElement("a");
     link.href = `categoria.html?genero=${encodeURIComponent(genre.name)}&tipo=${genre.type}`;
     const card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card_carrousel");
 
     const img = document.createElement("img");
     img.src = item.images?.jpg?.image_url || FALLBACK_IMAGE;
@@ -101,7 +100,6 @@ function crearCarruselParaGenero(genre, topData) {
     contenido.classList.add("card_contenido");
 
     const h1 = document.createElement("h1");
-    h1.classList.add("section_categorias");
     h1.textContent = item.title || genre.name;
 
     contenido.appendChild(h1);

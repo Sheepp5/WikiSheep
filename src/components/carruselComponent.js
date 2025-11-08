@@ -6,7 +6,7 @@ export function crearCarrusel(genreTitle, cards) {
   titulo.textContent = genreTitle;
   titulo.style.cursor = "pointer";
   titulo.addEventListener("click", () => {
-    window.location.href = `categoria.html?genero=${encodeURIComponent(genreTitle.toLowerCase())}&tipo=anime`;
+    window.location.href = `categoria.html?genero=${encodeURIComponent(genreTitle.toLowerCase())}&tipo=manga`;
   });
   sectionCategorias.appendChild(titulo);
 
@@ -24,8 +24,7 @@ export function crearCarrusel(genreTitle, cards) {
   const wrapper = document.createElement("div");
   wrapper.classList.add("carrusel_wrapper");
   cards.forEach(card => {
-    card.classList.add("card_item");
-    wrapper.appendChild(card);
+  wrapper.appendChild(card);
   });
   sectionContent.appendChild(wrapper);
   carouselContainer.appendChild(sectionContent);

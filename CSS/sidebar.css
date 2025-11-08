@@ -68,21 +68,6 @@
   color: var(--third-color);
 }
 
-/* .sidebar_overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.sidebar_overlay.is_open {
-  opacity: 1;
-  pointer-events: all;
-} */
-
 i {
   color: var(--third-color);
 }
