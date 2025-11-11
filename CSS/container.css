@@ -5,62 +5,62 @@
 
 .gallery {
   display: flex;
-  gap: 1.5rem;
-  padding: 2rem;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   justify-content: center;
-  margin-top: 5rem;  
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
-  url('../src/assets/background.jpg');
-  flex-wrap: wrap;
-  background-size: contain;
-  background-position: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url('../src/assets/background.jpg');
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /*Card y sus estilos, son diferentes a las del carrousel*/
 .card {
-  position: relative;
-  width: 180px;
-  height: 250px;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: height 0.5s ease;
-  box-shadow: 0px 2px 3px var(--main-color);
-  z-index: 1;
+
+  display: flex;
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  border-radius: 0px;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
 }
 
+.card:hover {
+  filter: blur(0px);
+  width: 400px;
+  height: 500px;
+  transition: 0.5s;
+}
 
 .card img {
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   height: 100%;
   width: 100%;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 /*Contenido de todas las cards*/
 .card_contenido {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  opacity: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  transition: height 0.3s ease, opacity 0.3s ease;
+  text-transform: uppercase;
+  color: var(--fourth-color);
+  background: var(--main-color);
+  border-radius: 0 0px 20px 20px;
+  letter-spacing: 2px;
   font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  padding: 25px 45px 0 25px;
+  width: 100%;
 }
 
 .card:hover .card_contenido {
-  color: black;
-  height: 2rem;
-  opacity: 1;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-top-right-radius: 10%;
-  border-top-left-radius: 10%;
+
 }
 
 .card:hover img {

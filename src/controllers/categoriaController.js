@@ -2,10 +2,9 @@ import { fetchData } from "../utils/fetchData.js";
 import { obtenerDatosPorGenero } from "../utils/obtenerDatos.js";
 
 async function obtenerGeneroPorNombre(tipo, nombre) {
-  // Define el endpoint dependiendo del tipo
   const url = tipo === "manga"
     ? "https://api.jikan.moe/v4/genres/manga"
-    : "https://api.jikan.moe/v4/genres/anime";
+    : "";
   try {
     const res = await fetchData(url);
     if (!res || !res.data) {

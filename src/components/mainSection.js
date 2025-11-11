@@ -21,7 +21,7 @@ async function obtenerGenresManga() {
 }
 
 async function obtenerTopRankedManga() {
-  const url = "https://api.jikan.moe/v4/manga?order_by=score&sort=desc";
+  const url = "https://api.jikan.moe/v4/top/manga";
   try {
     const res = await fetchData(url);
     if (!res || !res.data) {
