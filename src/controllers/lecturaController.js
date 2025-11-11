@@ -1,7 +1,7 @@
 import { cargarLectura } from "../models/lecturaModel.js";
 import { mostrarLectura } from "../views/lecturaView.js";
 import { crearHeader } from "../components/header.js";
-import { crearSidebar } from "../components/sidebar.js";
+/*import { crearSidebar } from "../components/sidebar.js";*/
 import { crearFooter } from "../components/footer.js";
 
 document.addEventListener("DOMContentLoaded", async () => {

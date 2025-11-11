@@ -18,6 +18,14 @@
     padding: 0 1rem;
     gap: 2rem;
   }
+
+  .header-container a i {
+    transition: color 0.3s;
+  }
+
+  .header-container a i:hover {
+    color: #ffffff;
+  }
   
   .logo {
     font-size: 1.8em;
@@ -50,15 +58,6 @@
     outline: none;
     font-size: 1rem;
     border-radius: 10px;
-  }
-  
-  .hamburger-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 5px;
-    background-color: var(--main-color);
   }
   
   .ri-menu-line {

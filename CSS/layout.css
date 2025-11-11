@@ -2,7 +2,7 @@ i {
   /* font-size: 1.5rem; */
   color: var(--fourth-color);
   transition: 0.5s;
-  color: var(--third-color);
+  color: var(--second-color);
 }
 
 a {
@@ -13,7 +13,7 @@ a:hover {
   text-decoration: underline;
 }
 
-p,
+/*p,
 a {
-  /* font-size: 0.9rem; */
-}
+  /* font-size: 0.9rem;
+}*/
