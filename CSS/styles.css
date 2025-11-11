@@ -16,10 +16,10 @@
 }
 
 :root {
-  --main-color: #21324B;
-  --second-color: #78b9BA;
+  --main-color: #1f2937;
+  --second-color: #32ada3;
   --third-color: #CE472F;
-  --fourth-color: #C6C5B4;
+  --fourth-color: #eef6fd;
 }
 
 #app {
@@ -44,6 +44,7 @@ aside.sidebar {
 main.content {
   grid-area: main;
   overflow-x: hidden;
+  background-color: var(--fourth-color);
 }
 
 footer.footer {
