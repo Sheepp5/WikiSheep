@@ -3,7 +3,6 @@
 @import url('header.css');
 @import url('layout.css');
 @import url('container.css');
-@import url('sidebar.css');
 @import url('footer.css');
 @import url('cards_horizontales.css');
 @import url('lectura.css');
@@ -19,7 +18,7 @@
 :root {
   --main-color: #1f2937;
   --second-color: #32ada3;
-  --third-color: #CE472F;
+  --third-color: #0d9488;
   --fourth-color: #eef6fd;
 }
 
@@ -36,10 +35,6 @@
 
 header.header {
   grid-area: header;
-}
-
-aside.sidebar {
-  grid-area: sidebar;
 }
 
 main.content {

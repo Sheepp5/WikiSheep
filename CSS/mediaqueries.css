@@ -1,9 +1,4 @@
 @media (max-width: 768px) {
-  .sidebar {
-    width: 250px;
-    max-width: 90vw;
-  }
-
   main.content {
     grid-area: main;
     width: 100% !important;

@@ -1,7 +1,3 @@
-import { crearSidebar } from './sidebar.js';
-
-let sidebarAbierto = false;
-
 export function crearHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
@@ -14,44 +10,38 @@ export function crearHeader() {
   logo.classList.add("logo");
   logo.textContent = "WikiSheep";
 
-  const menuButton = document.createElement("button");
-  menuButton.classList.add("hamburger-menu");
-  menuButton.setAttribute("aria-label", "Abrir menú");
-
-  const menuIcon = document.createElement("i");
-  menuIcon.classList.add("ri-menu-line");
-  menuButton.appendChild(menuIcon);
-
-  menuButton.addEventListener("click", async () => {
-    if (!sidebarAbierto) {
-      await crearSidebar({
-        onClose: () => {
-          menuIcon.classList.remove("ri-close-line");
-          menuIcon.classList.add("ri-menu-line");
-          sidebarAbierto = false;
-        }
-      });
-
-      // Abre manualmente con clase
-      document.querySelector('.sidebar')?.classList.add('is_open');
-      document.querySelector('.sidebar_overlay')?.classList.add('is_open');
-
-      menuIcon.classList.remove("ri-menu-line");
-      menuIcon.classList.add("ri-close-line");
-      sidebarAbierto = true;
-    }
-  });
-
-
   const logoWrap = document.createElement("div");
   logoWrap.style.display = "flex";
   logoWrap.style.alignItems = "center";
   logoWrap.style.gap = "1rem";
-  logoWrap.appendChild(menuButton);
   logoWrap.appendChild(logo);
 
+  // Contenedor de los iconos
+  const iconContainer = document.createElement("div");
+  iconContainer.style.display = "flex";
+  iconContainer.style.gap = "1rem";
+
+  const icons = [
+    { href: "index.html", iconClass: "fa-solid fa-house-chimney", title: "Home"},
+    {iconClass: "fa-solid fa-book", title: "Categories"},
+    {iconClass: "fa-solid fa-fire", title: "Most Popular"},
+  ]
+  
+  icons.forEach(({ href, iconClass, title }) => {
+    const link = document.createElement("a");
+    link.href = href;
+    link.title = title;
+    link.innerHTML = `<i class="${iconClass}"></i>`;
+    link.style.color = "var(--second-color)";
+    link.style.fontSize = "1.5rem";
+    link.style.display = "flex";
+    link.style.alignItems = "center";
+    iconContainer.appendChild(link);
+  });
+
+  // Ensamblar el header
   headerContainer.appendChild(logoWrap);
-  // headerContainer.appendChild(searchContainer);
+  headerContainer.appendChild(iconContainer);
   header.appendChild(headerContainer);
 
   return header;
